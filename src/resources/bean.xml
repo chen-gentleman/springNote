@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="bean.Address" scope="prototype">
+
+    </bean>
+    
+<bean id="user" class="bean.User">
+        <lookup-method name="getAddress" bean="address"></lookup-method>
+        <property name="username" value="chenxc"/>
+        <property name="age" value="24"/>
+        <property name="hobby">
+            <list>
+                <value>蓝球</value>
+                <value>乒乓球</value>
+                <value>王者</value>
+            </list>
+        </property>
+
+        <property name="petsAge">
+            <map>
+                <entry key="TOM" value="28" ></entry>
+                <entry key="jerry" value="27"></entry>
+            </map>
+        </property>
+
+    </bean>
+
+
+</beans>
