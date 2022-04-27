@@ -25,7 +25,7 @@ public class BeanDefinitionRegistryTest {
         System.out.println(factory.getBeanDefinition("name"));
         //通过名称判断是否注册过BeanDefinition
         System.out.println(factory.containsBeanDefinition("name"));
-        
+
 
     }
 }
